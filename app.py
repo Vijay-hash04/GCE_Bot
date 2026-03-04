@@ -99,7 +99,7 @@ if st.session_state.logged_in:
         st.rerun()
 
     # 🔐 USE ENVIRONMENT VARIABLE (Safer)
-    API_KEY = "AIzaSyD8ShfUhd6MQM0W6j5c-MxIOfm-fca-cIM"
+    API_KEY = " YOUR_API_KEY "
 
     if not API_KEY:
         st.error("API key not found. Set GEMINI_API_KEY environment variable.")
@@ -168,4 +168,5 @@ if st.session_state.logged_in:
         st.session_state.messages.append(
             {"role": "assistant", "content": response.text}
         )
+
         st.chat_message("assistant").write(response.text)
